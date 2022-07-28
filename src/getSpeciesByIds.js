@@ -1,5 +1,6 @@
 const data = require('../data/zoo_data');
-const { species } = data
+
+const { species } = data;
 function getSpeciesByIds(...ids) {
   // seu código aqui
   if (typeof ids === 'undefined') {
