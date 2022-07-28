@@ -5,6 +5,6 @@ function getSpeciesByIds(...ids) {
   if (typeof ids === 'undefined') {
     return [];
   }
-  return ids.map((id) => species.find((especies) => especies.id === id))
+  return ids.map((id) => species.find((especies) => especies.id === id));
 }
 module.exports = getSpeciesByIds;
