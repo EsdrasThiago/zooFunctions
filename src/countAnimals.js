@@ -4,10 +4,11 @@ const { species } = data;
 function countAnimals(animal) {
   // seu código aqui
   if (animal === undefined) {
-    return species.reduce((parcial, atual) => {
-      if (parcial[atual.name] === undefined) {
-        parcial[atual.name] = atual.residents.length;
-      } return parcial;
+    return species.reduce((valorParcial, valorAtual) => {
+      if (valorParcial[valorAtual.name] === undefined) {
+        const parcial = valorParcial;
+        parcial[valorAtual.name] = valorAtual.residents.length;
+      } return valorParcial;
     }, {});
   }
   const animais = species.find((nome) => nome.name === animal.specie);
