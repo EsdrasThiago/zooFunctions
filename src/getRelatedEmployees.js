@@ -11,11 +11,11 @@ function isManager(id) {
 function getRelatedEmployees(managerId) {
   // seu código aqui
   if (isManager(managerId) === true) {
-  const filtrados = employees
-    .filter((filtrar) => filtrar.managers
-      .find((elemento) => elemento === managerId));
+    const filtrados = employees
+      .filter((filtrar) => filtrar.managers
+        .find((elemento) => elemento === managerId));
     return filtrados.map((nomes) => `${nomes.firstName} ${nomes.lastName}`);
   }
-    throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
-  }
+  throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
+}
 module.exports = { isManager, getRelatedEmployees };
