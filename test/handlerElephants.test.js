@@ -4,9 +4,9 @@ describe('Testes da função HandlerElephants', () => {
   it('Testa se retorna undefined caso não receba parâmetro', () => {
     expect(handlerElephants()).toBeUndefined();
   });
-  //  it ('Envia uma mensagem de erro se o parâmetro não for uma string', () => {
-  //    expect(typeof handlerElephants(elephants)).toEqual('Parâmetro inválido, é necessário uma string');
-  //  });
+   it ('Envia uma mensagem de erro se o parâmetro não for uma string', () => {
+     expect(handlerElephants({})).toEqual('Parâmetro inválido, é necessário uma string');
+   });
   it('Testa se retorna 4 se receber count como parâmetro', () => {
     expect(handlerElephants('count')).toEqual(4);
   });
