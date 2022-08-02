@@ -25,7 +25,7 @@ function calculateEntry(entrants) {
     return 0;
   }
   const entradas = countEntrants(entrants);
-  const contador = entradas.child * 20.99 + entradas.adult * 49.99 + entradas.senior * 24.99;
+  const contador = entradas.child * data.prices.child + entradas.adult * data.prices.adult + entradas.senior * data.prices.senior;
   return contador;
 }
 module.exports = { calculateEntry, countEntrants };
