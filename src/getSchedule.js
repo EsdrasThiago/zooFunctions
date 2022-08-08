@@ -3,8 +3,7 @@ const data = require('../data/zoo_data');
 // const dias = Object.keys(data.hours);
 // const horas = Object.values(data.hours);
 // const animais = data.species;
-// const terca = data.hours;
-// console.log(terca);
+
 
 // const getAnimalDays = (scheduleTarget) => {
 //   if (animais.some((especies) => especies.name === scheduleTarget)) {
