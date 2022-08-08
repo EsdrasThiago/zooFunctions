@@ -1,18 +1,5 @@
 const data = require('../data/zoo_data');
 
-const emptyArray = (employee) => {
-  if (typeof employee === 'undefined') {
-    const employeeArray = [];
-    data.employees.forEach((operador) => employeeArray.push({
-      id: operador.id,
-      fullName: `${operador.firstName} ${operador.lastName}`,
-      species: findEmployeeAnimals(operador).map((name) => name.name),
-      locations: findEmployeeAnimals(operador).map((locations) => locations.location),
-    }))
-    return employeeArray
-  }
-};
-
 const findEmployee = (employee) => {
   if (data.employees.some((operador) => operador.firstName === employee.name)) {
     return data.employees.find((operator) => operator.firstName === employee.name);
@@ -39,6 +26,19 @@ const employeeAndAnimal = (employee) => {
     locations: animais.map((locations) => locations.location),
   };
   return info;
+};
+
+const emptyArray = (employee) => {
+  if (typeof employee === 'undefined') {
+    const employeeArray = [];
+    data.employees.forEach((operador) => employeeArray.push({
+      id: operador.id,
+      fullName: `${operador.firstName} ${operador.lastName}`,
+      species: findEmployeeAnimals(operador).map((name) => name.name),
+      locations: findEmployeeAnimals(operador).map((locations) => locations.location),
+    }));
+    return employeeArray;
+  }
 };
 
 function getEmployeesCoverage(employee) {

@@ -4,7 +4,6 @@ const data = require('../data/zoo_data');
 // const horas = Object.values(data.hours);
 // const animais = data.species;
 
-
 // const getAnimalDays = (scheduleTarget) => {
 //   if (animais.some((especies) => especies.name === scheduleTarget)) {
 //     const animal = animais.find((animais) => animais.name === scheduleTarget);
